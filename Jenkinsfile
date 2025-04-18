@@ -16,6 +16,7 @@ pipeline {
         stage('bruh') {
             steps {
                 echo 'Hello bruh'
+                error 'Testing failure in post'
             }
         }
     }
@@ -26,6 +27,9 @@ pipeline {
         }
         success {
             echo 'Success message!!!'
+        }
+        failure {
+            echo 'Failed!!'
         }
     }
 }
